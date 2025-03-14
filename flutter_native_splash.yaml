@@ -1,0 +1,10 @@
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/images/Shopely-icon.png
+  color_dark: "#000000"
+  image_dark: assets/images/Shopely-icon-black.png
+  android_12:
+    color: "#ffffff"
+    image: assets/images/Shopely-icon.png
+    color_dark: "#000000"
+    image_dark: assets/images/Shopely-icon-black.png
