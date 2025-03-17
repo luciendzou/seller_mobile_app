@@ -4,6 +4,7 @@ import 'package:seller_mobile_app/onboard/onboarding.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'auth/setup.dart';
+import 'constants/theme/theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,6 +22,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Shopely',
+      themeMode: ThemeMode.system,
+      theme: TAppTheme.lightTheme,
+      darkTheme: TAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
       home: AnimatedSplashScreen(
         splash: 'assets/gif/Seller-anim.gif',
