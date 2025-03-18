@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-
-import '../constants/validators/validation.dart';
-import 'widgets/custom_screen.dart';
+import 'package:seller_mobile_app/auth/final_signin.dart';
+import 'package:seller_mobile_app/auth/widgets/custom_screen.dart';
+import 'package:seller_mobile_app/constants/validators/validation.dart';
 
 class SignupPage extends StatelessWidget {
   const SignupPage({super.key});
@@ -140,8 +140,32 @@ class SignupPage extends StatelessWidget {
                               labelText: "Phone number",
                             ),
                           ),
+                          const SizedBox(height: 20),
+                          TextFormField(
+                            keyboardType: TextInputType.text,
+                            obscureText: true,
+                            validator: (value) =>
+                                TValidator.validatePassword(value),
+                            decoration: InputDecoration(
+                              enabledBorder: const OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10.0)),
+                                borderSide: BorderSide(),
+                              ),
+                              focusedBorder: const OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10.0)),
+                                borderSide: BorderSide(),
+                              ),
+                              prefixIcon: const Icon(Iconsax.password_check),
+                              labelText: "Password",
+                              suffixIcon: IconButton(
+                                  onPressed: () {},
+                                  icon: const Icon(Iconsax.eye_slash)),
+                            ),
+                          ),
                           const SizedBox(
-                            height: 60,
+                            height: 50,
                           ),
                           SizedBox(
                             width: 120,
@@ -152,12 +176,19 @@ class SignupPage extends StatelessWidget {
                                   backgroundColor:
                                       WidgetStatePropertyAll(Colors.blueAccent),
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (e) => const FinalSignin()));
+                                },
                                 child: const Padding(
                                   padding: EdgeInsets.symmetric(horizontal: 15),
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text('Next',
                                           textAlign: TextAlign.center,

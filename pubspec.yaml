@@ -21,6 +21,9 @@ dependencies:
   iconsax: ^0.0.8
   phone_text_field: ^0.0.7
   get: ^4.7.2
+  map_viewer_widget: ^0.0.6
+  flutter_map: ^3.1.0
+  latlong2: ^0.8.2
 
 dev_dependencies:
   flutter_test:

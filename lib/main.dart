@@ -1,5 +1,6 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:seller_mobile_app/onboard/onboarding.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -26,6 +27,8 @@ class MyApp extends StatelessWidget {
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
+      showSemanticsDebugger: false,
+      navigatorKey: Get.key,
       home: AnimatedSplashScreen(
         splash: 'assets/gif/Seller-anim.gif',
         splashIconSize: 250.0,
