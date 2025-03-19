@@ -24,13 +24,9 @@ class FinalSignin extends StatelessWidget {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                icon: const Icon(
-                  Icons.arrow_back,
-                ),
+                icon: const Icon(Icons.arrow_back),
               ),
-              const SizedBox(
-                height: 32,
-              ),
+              const SizedBox(height: 32),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 18),
                 child: Column(
@@ -44,18 +40,20 @@ class FinalSignin extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           TextFormField(
-                            validator: (value) =>
-                                TValidator.validateEmail(value),
+                            validator:
+                                (value) => TValidator.validateEmail(value),
                             keyboardType: TextInputType.emailAddress,
                             decoration: const InputDecoration(
                               enabledBorder: OutlineInputBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10.0)),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(10.0),
+                                ),
                                 borderSide: BorderSide(),
                               ),
                               focusedBorder: OutlineInputBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10.0)),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(10.0),
+                                ),
                                 borderSide: BorderSide(),
                               ),
                               prefixIcon: Icon(Iconsax.direct),
@@ -64,52 +62,58 @@ class FinalSignin extends StatelessWidget {
                           ),
                           const SizedBox(height: 20),
                           DropdownButtonFormField(
-                            items: ['Option 1', 'Option 2', 'Option 3']
-                                .map((option) => DropdownMenuItem(
-                                      value: option,
-                                      child: Text(option),
-                                    ))
-                                .toList(),
-                            onChanged: (value) {
-                              print(value);
-                            },
+                            items:
+                                ['Option 1', 'Option 2', 'Option 3']
+                                    .map(
+                                      (option) => DropdownMenuItem(
+                                        value: option,
+                                        child: Text(option),
+                                      ),
+                                    )
+                                    .toList(),
+                            onChanged: (value) {},
                             decoration: const InputDecoration(
                               enabledBorder: OutlineInputBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10.0)),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(10.0),
+                                ),
                                 borderSide: BorderSide(),
                               ),
                               focusedBorder: OutlineInputBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10.0)),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(10.0),
+                                ),
                                 borderSide: BorderSide(),
                               ),
                               prefixIcon: Icon(Iconsax.map),
                               labelText: "Country",
                             ),
                           ),
-                          const SizedBox(
-                            height: 25,
-                          ),
+                          const SizedBox(height: 25),
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Expanded(
                                 child: TextFormField(
-                                  validator: (value) =>
-                                      TValidator.validateInput(value, 'City'),
+                                  validator:
+                                      (value) => TValidator.validateInput(
+                                        value,
+                                        'City',
+                                      ),
                                   expands: false,
                                   keyboardType: TextInputType.text,
                                   decoration: const InputDecoration(
                                     enabledBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.all(
-                                          Radius.circular(10.0)),
+                                        Radius.circular(10.0),
+                                      ),
                                       borderSide: BorderSide(),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.all(
-                                          Radius.circular(10.0)),
+                                        Radius.circular(10.0),
+                                      ),
                                       borderSide: BorderSide(),
                                     ),
                                     prefixIcon: Icon(Iconsax.location),
@@ -117,23 +121,26 @@ class FinalSignin extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              const SizedBox(
-                                width: 15,
-                              ),
+                              const SizedBox(width: 15),
                               Expanded(
                                 child: TextFormField(
-                                  validator: (value) =>
-                                      TValidator.validateInput(value, 'Street'),
+                                  validator:
+                                      (value) => TValidator.validateInput(
+                                        value,
+                                        'Street',
+                                      ),
                                   keyboardType: TextInputType.text,
                                   decoration: const InputDecoration(
                                     enabledBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.all(
-                                          Radius.circular(10.0)),
+                                        Radius.circular(10.0),
+                                      ),
                                       borderSide: BorderSide(),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.all(
-                                          Radius.circular(10.0)),
+                                        Radius.circular(10.0),
+                                      ),
                                       borderSide: BorderSide(),
                                     ),
                                     prefixIcon: Icon(Iconsax.building),
@@ -143,43 +150,49 @@ class FinalSignin extends StatelessWidget {
                               ),
                             ],
                           ),
-                          const SizedBox(
-                            height: 20,
-                          ),
+                          const SizedBox(height: 20),
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               IconButton(
-                                  padding: const EdgeInsets.all(15),
-                                  style: const ButtonStyle(
-                                      backgroundColor: WidgetStatePropertyAll(
-                                        Color.fromARGB(225, 0, 82, 204),
+                                padding: const EdgeInsets.all(15),
+                                style: const ButtonStyle(
+                                  backgroundColor: WidgetStatePropertyAll(
+                                    Color.fromARGB(225, 0, 82, 204),
+                                  ),
+                                  shape: WidgetStatePropertyAll(
+                                    RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(10),
                                       ),
-                                      shape: WidgetStatePropertyAll(
-                                          RoundedRectangleBorder(
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(10))))),
-                                  color: Colors.white,
-                                  onPressed: () {},
-                                  icon: const Icon(Iconsax.location_add)),
-                              const SizedBox(
-                                width: 5,
+                                    ),
+                                  ),
+                                ),
+                                color: Colors.white,
+                                onPressed: () {},
+                                icon: const Icon(Iconsax.location_add),
                               ),
+                              const SizedBox(width: 5),
                               Expanded(
                                 child: TextFormField(
-                                  validator: (value) =>
-                                      TValidator.validateInput(value, 'location'),
+                                  validator:
+                                      (value) => TValidator.validateInput(
+                                        value,
+                                        'location',
+                                      ),
                                   keyboardType: TextInputType.text,
                                   decoration: const InputDecoration(
                                     enabledBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.all(
-                                          Radius.circular(10.0)),
+                                        Radius.circular(10.0),
+                                      ),
                                       borderSide: BorderSide(),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.all(
-                                          Radius.circular(10.0)),
+                                        Radius.circular(10.0),
+                                      ),
                                       borderSide: BorderSide(),
                                     ),
                                     prefixIcon: Icon(Iconsax.location_tick),
@@ -189,92 +202,92 @@ class FinalSignin extends StatelessWidget {
                               ),
                             ],
                           ),
-                          const SizedBox(
-                            height: 20,
-                          ),
+                          const SizedBox(height: 20),
                           Row(
                             children: [
                               SizedBox(
                                 width: 24,
                                 height: 24,
                                 child: Checkbox(
-                                    value: false, onChanged: (value) {}),
+                                  value: false,
+                                  onChanged: (value) {},
+                                ),
                               ),
-                              const SizedBox(
-                                width: 20,
-                              ),
+                              const SizedBox(width: 20),
                               Text.rich(
-                                TextSpan(children: [
-                                  TextSpan(
+                                TextSpan(
+                                  children: [
+                                    TextSpan(
                                       text: "Acceptez les ",
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .bodySmall),
-                                  TextSpan(
+                                      style:
+                                          Theme.of(context).textTheme.bodySmall,
+                                    ),
+                                    TextSpan(
                                       text: "conditions d'utilisation",
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .bodySmall!
-                                          .apply(
-                                            color: Colors.black,
-                                            decoration:
-                                                TextDecoration.underline,
-                                            decorationColor: Colors.black,
-                                          )),
-                                ]),
+                                      style: Theme.of(
+                                        context,
+                                      ).textTheme.bodySmall!.apply(
+                                        color: Colors.black,
+                                        decoration: TextDecoration.underline,
+                                        decorationColor: Colors.black,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ],
                           ),
-                          const SizedBox(
-                            height: 25,
-                          ),
+                          const SizedBox(height: 25),
                           SizedBox(
                             width: 120,
                             height: 55,
                             child: ElevatedButton(
-                                style: const ButtonStyle(
-                                  enableFeedback: true,
-                                  backgroundColor:
-                                      WidgetStatePropertyAll(Colors.blueAccent),
+                              style: const ButtonStyle(
+                                enableFeedback: true,
+                                backgroundColor: WidgetStatePropertyAll(
+                                  Colors.blueAccent,
                                 ),
-                                onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (e) =>
-                                              const CompletSignin()));
-                                },
-                                child: const Padding(
-                                  padding: EdgeInsets.symmetric(horizontal: 15),
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text('Next',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w700,
-                                              fontSize: 20)),
-                                      Icon(
-                                        Iconsax.arrow_right_1,
-                                        color: Colors.white,
-                                      )
-                                    ],
+                              ),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (e) => const CompletSignin(),
                                   ),
-                                )),
+                                );
+                              },
+                              child: const Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 15),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'Next',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 20,
+                                      ),
+                                    ),
+                                    Icon(
+                                      Iconsax.arrow_right_1,
+                                      color: Colors.white,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
                           ),
-                          const SizedBox(
-                            height: 20,
-                          ),
+                          const SizedBox(height: 20),
                         ],
                       ),
                     ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),

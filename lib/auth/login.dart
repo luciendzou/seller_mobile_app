@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:phone_text_field/phone_text_field.dart';
 import 'package:seller_mobile_app/auth/widgets/custom_screen.dart';
+import 'package:seller_mobile_app/home/home.dart';
 
 import 'forget_pwd.dart';
 
@@ -172,7 +173,12 @@ class LoginPage extends StatelessWidget {
                                 backgroundColor:
                                     WidgetStatePropertyAll(Colors.blueAccent),
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (e) => const HomePage()));
+                              },
                               child: const Text(
                                 "Log In",
                                 textAlign: TextAlign.center,
