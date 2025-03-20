@@ -31,43 +31,46 @@ class SendMail extends StatelessWidget {
                   Container(
                     width: double.infinity,
                     height: 200,
+                    padding: const EdgeInsets.all(50),
                     decoration: BoxDecoration(
-                      border: Border.all(),
                       image: DecorationImage(
                         image: AssetImage('assets/images/mail_send.jpg'),
-                        fit: BoxFit.cover,
+                        fit: BoxFit.contain,
                       ),
                     ),
                   ),
                   SizedBox(height: 25),
-                  RichText(
-                    textAlign: TextAlign.center,
-                    text: const TextSpan(
-                      children: [
-                        TextSpan(
-                          text: "An email has been sent to ",
-                          style: TextStyle(
-                            fontSize: 14.0,
-                            color: Color.fromARGB(255, 1, 24, 51),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: RichText(
+                      textAlign: TextAlign.center,
+                      text: const TextSpan(
+                        children: [
+                          TextSpan(
+                            text: "An email has been sent to ",
+                            style: TextStyle(
+                              fontSize: 14.0,
+                              color: Color.fromARGB(255, 1, 24, 51),
+                            ),
                           ),
-                        ),
-                        TextSpan(
-                          text: "luciendzou3@gmail.com",
-                          style: TextStyle(
-                            fontSize: 14.0,
-                            fontWeight: FontWeight.w600,
-                            color: Color.fromARGB(255, 24, 41, 61),
+                          TextSpan(
+                            text: "luciendzou3@gmail.com",
+                            style: TextStyle(
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.w600,
+                              color: Color.fromARGB(255, 24, 41, 61),
+                            ),
                           ),
-                        ),
-                        TextSpan(
-                          text:
-                              ", please click on the link in the email to activate your account, otherwise you won't be able to shop as normal.",
-                          style: TextStyle(
-                            fontSize: 14.0,
-                            color: Color.fromARGB(255, 24, 41, 61),
+                          TextSpan(
+                            text:
+                                ", please click on the link in the email to activate your account, otherwise you won't be able to shop as normal.",
+                            style: TextStyle(
+                              fontSize: 14.0,
+                              color: Color.fromARGB(255, 24, 41, 61),
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(height: 30),

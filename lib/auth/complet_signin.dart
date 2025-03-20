@@ -81,7 +81,7 @@ class CompletSignin extends StatelessWidget {
                         const SizedBox(
                           width: 150,
                           child: Text(
-                            "Cameroun, \nYaoundé, Nkobisson, \n3.877202240404152, 11.421523804399994",
+                            "Cameroun, \nYaoundé, Nkobisson",
                             textAlign: TextAlign.start,
                             style: TextStyle(fontSize: 14),
                           ),

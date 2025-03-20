@@ -24,6 +24,10 @@ dependencies:
   map_viewer_widget: ^0.0.6
   flutter_map: ^3.1.0
   latlong2: ^0.8.2
+  forex_conversion: ^0.2.5+1
+  currency_text_input_formatter: ^2.2.9
+  intl:
+  flutter_rating_stars: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -37,6 +41,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/products/
     - assets/gif/
     - assets/svg/
 
