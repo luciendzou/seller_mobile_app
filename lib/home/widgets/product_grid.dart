@@ -34,7 +34,7 @@ class ProductGrid extends StatelessWidget {
                   image: DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage(
-                      "assets/products/8153.jpg",
+                      "assets/products/parfum.jpg",
                     ),
                   ),
                 ),

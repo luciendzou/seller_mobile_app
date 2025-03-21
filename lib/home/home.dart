@@ -6,6 +6,7 @@ import 'package:seller_mobile_app/auth/widgets/custom_screen.dart';
 import 'package:seller_mobile_app/home/widgets/cart_home.dart';
 import 'package:seller_mobile_app/home/widgets/product_grid.dart';
 import 'package:seller_mobile_app/home/widgets/product_home.dart';
+import 'package:seller_mobile_app/home/widgets/search_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -27,6 +28,8 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
+                  SearchBarWidget(),
+                  SizedBox(height: 15),
                   HomeCategories(),
                   SizedBox(height: 15),
                   FeaturesProducts(title: "Featured Products",),
@@ -72,10 +75,15 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 25),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
               child: FeaturesProducts(title: "Popular Products",),
+            ),
+            SizedBox(height: 10),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+              child: FeaturesProducts(title: "Best Selling",),
             ),
           ],
         ),
